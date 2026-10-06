@@ -773,25 +773,18 @@ function PastVersions() {
       </button>
       {open && (
         <div className="versions-card" role="dialog" aria-label="past versions">
-          <p className="mono">this site, through the years</p>
           <ul>
             <li className="versions-now">
-              <span className="versions-shot versions-shot-now">v{VERSIONS.length + 1}</span>
-              <span className="versions-text">
-                <strong>this one</strong>
-                <span>you are here.</span>
-              </span>
-              <span className="mono versions-year">now</span>
+              <span>this one</span>
+              <span className="mono">now</span>
             </li>
             {VERSIONS.map((v) => (
               <li key={v.url}>
                 <a href={v.url} target="_blank" rel="noreferrer">
-                  <img className="versions-shot" src={`/media/${v.shot}`} alt="" loading="lazy" />
-                  <span className="versions-text">
-                    <strong>{v.title} ↗</strong>
-                    <span>{v.note}</span>
+                  <span>
+                    {v.title} <em>↗</em>
                   </span>
-                  <span className="mono versions-year">{v.year}</span>
+                  <span className="mono">{v.year}</span>
                 </a>
               </li>
             ))}

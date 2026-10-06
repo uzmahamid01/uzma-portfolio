@@ -95,7 +95,7 @@ export const PLAY = [
 
 // Earlier versions of this site, newest first (from v1's archive page).
 export const VERSIONS = [
-  { year: 2026, title: 'research portfolio', note: 'papers and projects, laid out plain so the work does the talking.', url: 'https://uzmahamid.vercel.app/', shot: 'archive-research.png' },
-  { year: 2026, title: 'portfolio', note: 'ai, ml, product and design in one place, with architecture diagrams.', url: 'https://uzmahamid.netlify.app/', shot: 'archive-aiml.png' },
-  { year: 2025, title: 'portfolio', note: 'the full-stack era: backend systems and database architecture.', url: 'https://uzmah.netlify.app/', shot: 'archive-fullstack.png' },
+  { year: 2026, title: 'research portfolio', note: 'papers and projects, laid out plain so the work does the talking.', url: 'https://uzmahamid.vercel.app/' },
+  { year: 2026, title: 'portfolio', note: 'ai, ml, product and design in one place, with architecture diagrams.', url: 'https://uzmahamid.netlify.app/' },
+  { year: 2025, title: 'portfolio', note: 'the full-stack era: backend systems and database architecture.', url: 'https://uzmah.netlify.app/' },
 ];
