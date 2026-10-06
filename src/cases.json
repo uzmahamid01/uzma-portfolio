@@ -1,0 +1,193 @@
+{
+  "Gaussian Research Graph": {
+    "tagline": "",
+    "role": "Backend · Solo",
+    "about": [
+      "The Gaussian Graph Research Agent is an agentic data pipeline purpose-built to transform a corpus of academic papers on Gaussian Splatting and neural rendering into a queryable, structured Research Knowledge Graph (RKG). Instead of treating papers as flat documents, the system ingests them through LLM-powered agents that extract typed entities (methods, datasets, concepts, challenges) and semantic relationships (improves_on, introduces, outperforms, uses_dataset) and stores the resulting graph in PostgreSQL.",
+      "The system targets a key gap in academic research tooling: current tools (Google Scholar, Semantic Scholar) surface citation graphs but not the deeper semantic and technical linkages between ideas — e.g., which methods build on which concepts, what challenges are being addressed, how methods compare, and what datasets underpin specific improvements."
+    ],
+    "sections": [
+      {
+        "heading": "the problem",
+        "body": [
+          "Research in fast-moving fields like 3D Gaussian Splatting is difficult to navigate. Hundreds of papers are published per year, many building on, improving, or competing with each other.",
+          "<ul><li><strong>Researchers face:</strong></li> \n <li> <strong>Information overloadhard: </strong> to track what improves on what, especially across 50–100+ papers.</li> <li> <strong>No semantic search: </strong> keyword search misses conceptual relationships; citations only capture direct references.</li> <li> <strong> No lineage tracking: </strong> hard to answer \"which papers improve 3DGS by using spherical harmonics?\" without reading everything.</li> <li> <strong> No structured benchmarking: </strong> performance comparisons scattered across papers with no unified view.</li></ul>",
+          "The system answers queries like:",
+          "Which papers improve on the original 3DGS method?",
+          "What are the most influential concepts across this literature?",
+          "Which methods outperform each other, and with what evidence?",
+          "Which datasets are used by papers improving 3DGS?",
+          "What challenges are each paper addressing?"
+        ]
+      }
+    ],
+    "diagram": "gaussian-arch.png"
+  },
+  "DeepNeural": {
+    "tagline": "CS Research Scrolling App",
+    "role": "Web App · Solo",
+    "about": [
+      "DeepNeural is an infinite-scroll App for discovering AI and ML research papers. It aggregates content from 8 academic sources, surfaces it in a card-based swipe feed, uses ai generated summaries on demand, and lets users bookmark papers locally for later reading."
+    ],
+    "sections": [
+      {
+        "heading": "the problem",
+        "body": [
+          "Keeping up with AI research in 2026 is broken in three distinct ways:",
+          "<strong>Volume</strong>. arXiv alone receives 500–600 new CS papers per day. No individual can triage that volume via RSS, email digest, or conference proceedings.",
+          "<strong>Fragmentation</strong>. Relevant work is scattered across arXiv, Semantic Scholar, Hugging Face, OpenReview, ACL Anthology, and dozens of conference portals. Researchers maintain ad-hoc collections of bookmarks, Twitter lists, and Slack channels to patch this together.",
+          "<strong>Friction</strong>. Even when a paper is found, reading the abstract to decide whether it's worth reading takes 2–3 minutes. Multiply that by 30 papers a day and discovery becomes a job in itself.",
+          "<strong>No Mobile Support</strong>: For most of the sites we need to have a laptop for best experience with discovering, reading and saving papers.",
+          "Existing tools (Arxiv Sanity, Papers With Code, Connected Papers) solve discovery but not consumption. They present paper lists, not paper experiences. None of them make the decision-to-read fast enough to be part of a daily habit."
+        ]
+      },
+      {
+        "heading": "what i built",
+        "body": [
+          "DeepNeural reframes paper discovery as a feed, not a list.",
+          "The core insight: the interaction model of scrollable content apps, one piece of content, full screen, scroll to next, maps well onto the \"should I read this paper?\" decision loop. You don't browse, you evaluate one paper at a time, decide if its of your liking save it for later access and if not then move on.",
+          "Four product principles drove every technical decision:",
+          "<strong>Speed to signal</strong>. An AI-generated 3-bullet summary appears before the user consciously decides to keep scrolling. The summaries are loaded in under 200ms.",
+          "<strong>Zero friction to install</strong>. No app store, no account, no email. Open the URL in Safari, tap Share → Add to Home Screen. Done.",
+          "<strong>Always fresh without polling</strong>. Papers should reflect today's arXiv submissions by the time a researcher opens the app in the morning.",
+          "<strong>Save without signing up</strong>. Bookmarks persist across sessions via localStorage no account, no server round-trip, no privacy trade-off. The full paper object is stored locally so the saved list works even offline."
+        ]
+      }
+    ],
+    "diagram": "deepneural-arch.png"
+  },
+  "ShieldED Haven": {
+    "tagline": "Platform for AI Powered Cyberbullying Detection Software",
+    "role": "Website · StartUp",
+    "about": [
+      "ShieldED Haven is a SaaS platform that serves as a platform for an AI-powered cyberbullying detection software. The application provides users with tools to identify and mitigate instances of cyberbullying across various online platforms. By leveraging advanced machine learning algorithms, ShieldED Haven analyzes text and multimedia content to detect harmful behavior and provide actionable insights. The platform features a user-friendly interface, real-time monitoring, and reporting capabilities, empowering individuals and organizations to create safer online environments. I led the development of the face of their software by buildin a modern, responsive, interactive, and user friendly website for the company."
+    ],
+    "sections": [
+      {
+        "heading": "the approach",
+        "body": [
+          "For ShieldED Haven, the website was designed as the trust-building front layer of the startup's AI product.",
+          "The focus was on communicating a complex, sensitive technology in a way that feels clear, credible, and human.",
+          "The approach prioritized clarity and storytelling, translating technical capabilities into simple, outcome-driven messaging around student safety and real-time insights. A strong information hierarchy guides users from problem → solution → how it works → action, helping them quickly understand the product's value.",
+          "The visual design uses a calm, trust-first aesthetic with consistent components and clean layouts to reinforce credibility. Content was structured to address multiple stakeholders administrators, counselors, and parents while maintaining a unified narrative.",
+          "Finally, the site was built to be fast, responsive, and conversion-focused, with clear calls-to-action that turn interest into engagement."
+        ]
+      }
+    ]
+  },
+  "Yemberzal": {
+    "tagline": "Reviving Kashmiri Fashion for the World",
+    "role": "Web App · Solo",
+    "about": [
+      "a Yemberzal is a digital marketplace and search platform designed to bring Kashmiri clothing and cultural heritage to a global audience. The platform provides structured product listings with images, descriptions, categories, and links to authentic artisan brands, allowing users to explore and purchase traditional garments like Pherans and Pashmina shawls with ease. Built with a modern web stack, it incorporates a responsive frontend, dynamic search functionality, and backend systems to manage products, categories, and users. Sustainability and ethical sourcing are central, prioritizing eco-friendly artisan production methods. Yemberzal bridges artisans and international consumers, promoting both cultural preservation and the global accessibility of Kashmiri fashion."
+    ],
+    "sections": []
+  },
+  "Zyora": {
+    "tagline": "Virtual Try-On for Online Shopping | Style. Simplified. Virtually.",
+    "role": "Chrome Extension · Solo",
+    "about": [
+      "ZYORA is a Chrome browser extension that enables users to virtually try on clothing items using AI. By uploading a personal photo and selecting a garment from any webpage, users receive an AI-generated image of themselves wearing that outfitall without leaving their browser."
+    ],
+    "sections": [
+      {
+        "heading": "the problem",
+        "body": [
+          "Online fashion shoppers face a significant pain point: they cannot visualize how clothes will look on their own body before purchasing.",
+          "<ul><li>Traditional solutions either require: </li>",
+          "<li>Visiting a physical store</li>",
+          "<li>Relying on generic model photos that don't reflect the shopper's body type</li>",
+          "<li>Expensive AR fitting room hardware</li>",
+          "No existing tool allows a user to try on garments from any website directly in their browser with zero friction.</li></ul>"
+        ]
+      },
+      {
+        "heading": "what i built",
+        "body": [
+          "<ul><li>ZYORA solves this with a context-aware Chrome side panel that:</li>",
+          "<li>Lets users upload their own photo once</li>",
+          "<li> Right-click any clothing image on any webpage to trigger a try-on</li>",
+          "<li> Generates a photorealistic AI image of the user wearing that garment in seconds</li>",
+          "<li>Saves generated looks to a personal history gallery</li></ul>"
+        ]
+      }
+    ],
+    "diagram": "zyora-arch.png"
+  },
+  "M3SH": {
+    "tagline": "Cloud-native 3D model management and visualization platform",
+    "role": "Web App · Solo",
+    "about": [
+      "M3sh is a cloud-native 3D model management and visualization platform. It gives users a personal workspace to upload, store, browse, and interactively view 3D asset files directly in the browser no desktop software required."
+    ],
+    "sections": [
+      {
+        "heading": "the problem",
+        "body": [
+          "3D asset management is typically fragmented across desktop tools, cloud drives, and proprietary platforms. Designers, developers, and hobbyists often lack a lightweight, unified solution to:",
+          "Store and organize 3D models with metadata",
+          "Preview models without installing software",
+          "Access their library from any device",
+          "M3sh addresses this by providing a browser-first, authenticated model vault with real-time 3D rendering."
+        ]
+      }
+    ],
+    "diagram": "m3sh.png"
+  },
+  "iChild HealthWise": {
+    "tagline": "Olivia Health: RAG-Powered Healthcare Chatbot for Contextual Medical Guidance",
+    "role": "AI Software · Team Project",
+    "about": [
+      "iChild HealthWise is an AI-driven healthcare platform designed to provide personalized, context-aware health insights for pregnant women and families. Leveraging Retrieval-Augmented Generation (RAG) through LangChain and the OliviaHealth knowledge base, the system interprets natural language queries to deliver accurate, up-to-date responses. The backend, powered by Flask and PostgreSQL, handles NLP, embedding generation, and conversation context, while the frontend, built in React and TypeScript, provides a dynamic and responsive interface. Key features that I built include follow-up question handling, conversational history, and upcoming real-time streaming for continuous interaction. The platform combines advanced AI, robust backend architecture, and user-friendly design to make healthcare information accessible, personalized, and actionable for users worldwide."
+    ],
+    "sections": []
+  },
+  "Accuracy on the Negative Line": {
+    "tagline": "Predictive Performance Under Dataset Shift",
+    "role": "ML Research · Individual w/ PI and Mentor",
+    "about": [
+      "Predictive Performance Under Dataset Shift investigates the challenges of deploying machine learning models on real-world, out-of-distribution (OOD) data. The research highlights the “Accuracy on the Negative Line” (AOTNL) phenomenon, where models with high in-distribution (ID) accuracy fail to generalize to unseen data. To address this, the project introduces a dual-evaluation framework that measures performance across both ID and OOD datasets. Using advanced neural networks, domain adaptation, regularization, and model calibration techniques, the study quantifies discrepancies between ID and OOD performance and proposes benchmarks for more robust model generalization. This work provides actionable insights for developing machine learning models that maintain reliability in diverse, real-world conditions."
+    ],
+    "sections": []
+  },
+  "Cleo": {
+    "tagline": "Smart Course Schedule Builder for College Students",
+    "role": "Software · Team Project",
+    "about": [
+      "Cleo: Smart Course Schedule Builder is a platform that helps college students optimize their course selections and degree planning. Built with Ruby on Rails and PostgreSQL, Cleo integrates a recommendation algorithm that considers degree requirements, prerequisites, target graduation dates, and individual student preferences to generate personalized course schedules. The platform leverages Python scripts for maintaining up-to-date course catalogs, provides a responsive frontend using HTML, CSS, and JavaScript, and ensures secure authentication via Google OAuth. With modular architecture, CI/CD via GitHub Actions, and deployment through Docker and Heroku, Cleo streamlines academic planning, automates routine scheduling tasks, and supports both students and advisors in making informed academic decisions."
+    ],
+    "sections": []
+  },
+  "Revs": {
+    "tagline": "Modernizing Point-of-Sale Systems for Enhanced Dining Experiences",
+    "role": "Software · Team Project",
+    "about": [
+      "Revs Restaurant Web Application is a full-stack web application designed to modernize point-of-sale systems and enhance the dining experience at Rev’s Grill. The platform leverages Django for backend operations and React for a dynamic frontend interface, implementing OAuth for secure login. It integrates a responsive, human-centered design for intuitive order placement, interactive menus, and streamlined checkout, while providing restaurant managers with detailed reports on sales, inventory, and customer preferences. By combining a robust backend capable of handling large datasets with an engaging, user-friendly frontend, Revs simplifies operational workflows, reduces errors, and improves customer satisfaction. The system also supports Agile development practices, enabling iterative improvements and feature enhancements to continuously refine the user experience."
+    ],
+    "sections": []
+  },
+  "CreatorVerse": {
+    "tagline": "Connecting You with Top Creators Across All Fields",
+    "role": "Web App · Solo",
+    "about": [
+      "CreatorVerse is a full-stack web application that serves as a curated space with top creators across various fields, providing a centralized platform for discovery of the builders. Built with React on the frontend and Node.js on the backend, the platform enables users to search for creators, and exploring detailed profiles and what they are building. The system integrates a robust backend with database support to manage profiles, content, and engagement data, ensuring a responsive, user-friendly interface. CreatorVerse fosters a vibrant creative community by combining seamless full-stack functionality with features that support discovery, inspiration and content management, making it easy for creators, builders and audiences to connect discover meaningfully based on the niche."
+    ],
+    "sections": []
+  },
+  "Connect Four": {
+    "tagline": "A JavaFX Implementation of the Classic Strategy Game",
+    "role": "Game · Team Project",
+    "about": [
+      "Connect-Four is a JavaFX-based implementation of the classic strategy game, designed to demonstrate object-oriented design and provide an intuitive graphical user interface. The application features a dynamically generated game board, single-player mode with a basic random AI, and multiplayer functionality. Core components, including ShadowData for board state management, AI for move generation, GameBoard for UI rendering, and Log for file I/O, were implemented to ensure modularity and maintainability. The project integrates features such as error handling for invalid moves, game reset, and save/load functionality, all built on a robust 2D array-based data structure. Connect-Four showcases Java programming principles, GUI design, and modular architecture to deliver an engaging and extendable gaming experience."
+    ],
+    "sections": []
+  },
+  "Robot Object Grasping": {
+    "tagline": "Enhancing Robotic Manipulation with GNNs and Image Segmentation",
+    "role": "Computer Vision · Robotics Research · Team Project",
+    "about": [
+      "Deep Learning Based Object Grasping for Robots is a research-focused project that enhances robotic manipulation through advanced image segmentation and Graph Neural Networks (GNNs). The system models relationships between object parts and their spatial context, enabling robots to accurately segment and recognize table-top objects in cluttered environments. Using datasets like OCID and OSD for training and testing, the model improves grasping success rates by 30% and reduces false positives by 25%, demonstrating robustness across diverse scenarios. By integrating GNNs with deep learning-based segmentation, the project provides a scalable and reliable framework for precise robotic object grasping, applicable in dynamic real-world settings."
+    ],
+    "sections": []
+  }
+}
