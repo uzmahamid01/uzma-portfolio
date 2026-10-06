@@ -816,12 +816,14 @@ function Talk() {
           <span className="mono">© 2026 uzma hamid</span>
           <PastVersions />
         </div>
+        {/* Design credit, hidden for now:
         <p className="foot-credit">
           design inspired by{' '}
           <a href="https://www.somehowliving.tech/" target="_blank" rel="noreferrer">
             nidhi prajapati
           </a>
         </p>
+        */}
         <a className="mono foot-top" href="#top" onClick={(e) => { e.preventDefault(); scrollTo({ top: 0, behavior: 'smooth' }); }}>
           back to top <em>↑</em>
         </a>

@@ -304,7 +304,7 @@ ol, ul { list-style: none; }
 .talk-title { line-height: 0.95; }
 .talk-cat { position: absolute; right: 10vw; top: 6vh; width: clamp(110px, 10vw, 170px); }
 .talk-links { display: flex; flex-wrap: wrap; gap: 12px 36px; margin-top: 5vh; font-size: clamp(18px, 1.6vw, 24px); }
-.foot { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; margin-top: 16vh; padding-top: 22px; border-top: 1px solid var(--line); }
+.foot { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; margin-top: 16vh; padding-top: 22px; border-top: 1px solid var(--line); }
 .foot-left { white-space: nowrap; }
 .foot-top { justify-self: end; color: var(--ink); transition: color 0.3s; }
 .foot-top em { font-style: normal; display: inline-block; transition: transform 0.4s var(--ease); }
@@ -694,3 +694,14 @@ button:disabled, [aria-disabled='true'] { cursor: not-allowed; }
 .versions-now { color: var(--muted); }
 .versions-now span:first-child::before { content: ''; display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 50%; background: var(--hover); vertical-align: 1px; }
 @media (max-width: 820px) { .versions-card { left: auto; right: -12px; } }
+
+/* small phones: keep the nav on one line */
+.brand, .nav-links a { white-space: nowrap; }
+@media (max-width: 480px) {
+  .nav { padding-left: 16px; padding-right: 16px; }
+  .brand { font-size: 24px; }
+  .nav-links { gap: 14px; font-size: 13.5px; }
+}
+@media (max-width: 370px) {
+  .nav-links { gap: 11px; font-size: 12.5px; }
+}
