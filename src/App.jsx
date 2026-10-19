@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Obj, InkDefs } from './objects.jsx';
 import Player, { openPlayer } from './Player.jsx';
 import StringRover from './StringRover.jsx';
+import RobotArm from './RobotArm.jsx';
 import { linkTo, projectPath } from './router.js';
 import { LINKS, THINGS, STORY, PATH, CREDO, WORK, PLAY, VERSIONS } from './data.js';
 
@@ -357,6 +358,7 @@ function useReveal() {
 function Hero() {
   return (
     <div className="panel panel-hero">
+      <RobotArm />
       <figure className="hero-desk">
         <img src="/media/doodle.png" alt="an ink drawing of me at a desk, under a lamp, laptop open" />
         <figcaption className="aside">
