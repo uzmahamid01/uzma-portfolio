@@ -824,8 +824,38 @@ function Talk() {
           </a>
         </p>
         */}
-        <a className="mono foot-top" href="#top" onClick={(e) => { e.preventDefault(); scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          back to top <em>↑</em>
+        <a
+          className="mono foot-top"
+          href="#top"
+          onClick={(e) => {
+            e.preventDefault();
+            // the arm stretches up first, then the page follows it
+            const el = e.currentTarget;
+            el.classList.add('lift');
+            setTimeout(() => {
+              scrollTo({ top: 0, behavior: 'smooth' });
+              el.classList.remove('lift');
+            }, 380);
+          }}
+        >
+          back to top
+          {/* a little folded robot arm: hover unfolds it to point up */}
+          <svg className="mini-arm" viewBox="0 0 60 80" aria-hidden="true">
+            <path className="ma-base" d="M16 76 H44 L40 68 H20 Z" />
+            <g className="ma-j1">
+              <path className="ma-link" d="M30 66 V42" />
+              <g className="ma-j2">
+                <path className="ma-link ma-link2" d="M30 42 V22" />
+                <g className="ma-claw">
+                  <path className="ma-finger ma-f1" d="M30 20 C 24 16, 23 10, 26 5" />
+                  <path className="ma-finger ma-f2" d="M30 20 C 36 16, 37 10, 34 5" />
+                  <circle cx="30" cy="21" r="3.5" className="ma-wrist" />
+                </g>
+              </g>
+              <circle cx="30" cy="42" r="4.5" className="ma-joint" />
+            </g>
+            <circle cx="30" cy="66" r="5.5" className="ma-joint" />
+          </svg>
         </a>
       </footer>
     </section>
