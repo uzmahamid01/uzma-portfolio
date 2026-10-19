@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Obj, InkDefs } from './objects.jsx';
 import Player, { openPlayer } from './Player.jsx';
+import StringRover from './StringRover.jsx';
 import { linkTo, projectPath } from './router.js';
 import { LINKS, THINGS, STORY, PATH, CREDO, WORK, PLAY, VERSIONS } from './data.js';
 
@@ -49,6 +50,8 @@ function HorizontalScroll({ children, onProgress }) {
           blob.setAttribute('cx', tip[0]);
           blob.setAttribute('cy', tip[1]);
           blob.classList.toggle('on', drawn > 0.002 && drawn < 1);
+          // where the drawing tip is, for the rover that rides it
+          track._tip = { i: Math.round(drawn * ((path._pts?.length || 1) - 1)), x: tip[0], y: tip[1], on: drawn > 0.002 };
         }
         track.querySelectorAll('.thread-bead').forEach((b) => b.classList.toggle('on', +b.dataset.x < head));
       }
@@ -94,6 +97,7 @@ function HorizontalScroll({ children, onProgress }) {
       <div className="h-sticky">
         <div ref={trackRef} className="h-track">
           <Thread trackRef={trackRef} />
+          <StringRover />
           {children}
         </div>
         {/* Progressive blur on both edges: things soften as they slide in and out. */}
