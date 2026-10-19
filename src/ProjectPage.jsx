@@ -100,7 +100,7 @@ export default function ProjectPage({ slug }) {
     setActive('');
     document.title = w ? `${w.title} — uzma hamid` : 'not found — uzma hamid';
     return () => {
-      document.title = 'Uzma Hamid — a field guide';
+      document.title = 'Uzma Hamid';
     };
   }, [w]);
 
